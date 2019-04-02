@@ -1,1 +1,54 @@
-sss
+//1---------------Rigidbody SetVelocity-------------------------
+using UnityEngine;
+public class MoveTransform: MoveBehavior
+{
+   private void Update() 
+   { 
+     transform.position += transform.forward * Time.deltaTime;
+    }
+}
+
+//2-------------------Transform Translate----------------------
+using UnityEngine;
+public class TransformTranslate: MoveBehavior
+{
+   private void Update() 
+   { 
+     transform.translate (Vector3.forward * Time.deltaTime);
+    }
+}
+
+//3----------------------Rigidbody AddForce---------------------
+using UnityEngine;
+public class RigidbodyAddForce: MoveBehavior
+{
+   public float forceMult = 100;
+   private Rigidbody rb;
+   
+   private void Awake()
+   {
+    rb = GetComponent<Rigidbody>();
+   }
+   private void Update() 
+   { 
+     rb.AddForce(transform.forward * forceMult);
+    }
+}
+
+//4-------------------Rigidbody MovePosition---------------------------
+using UnityEngine;
+public class RigidbodyMovePosition: MoveBehavior
+{
+   public float forceMult = 200;
+   private Rigidbody rb;
+   
+   private void Awake()
+   {
+    rb = GetComponent<Rigidbody>();
+   }
+   private void Update() 
+   { 
+   Vector3 newPosition = newPosition = transform.position + (transform.forward * Time.deltaTime);
+     rb.MovePositionNewPosition);
+    }
+}
