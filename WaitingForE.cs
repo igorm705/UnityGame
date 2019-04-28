@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,14 +7,15 @@ using UnityEngine;
 
 public class WaitingForE : MonoBehaviour
 {
+
     //UI GameObject
     public GameObject uiObject;
-   
+    public GameObject camera1;
     // Start is called before the first frame update
     void Start()
     {
         uiObject.SetActive(false);
-      
+        camera1.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
