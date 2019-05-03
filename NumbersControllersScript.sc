@@ -98,10 +98,6 @@ public class NumbersControllersScript : MonoBehaviour
             target.y = numbers[i].transform.position.y + 7.5f;
             target.z = numbers[i].transform.position.z;
 
-            
-            enable_move.number = numbers[i];
-            enable_move.enabled = true;
-
         }
     }
 
